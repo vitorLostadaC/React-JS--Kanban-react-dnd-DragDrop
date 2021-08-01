@@ -69,7 +69,7 @@ export default function List({ data, index: listIndex }) {
   }
 
   function validation() {
-    if (task.title == "" || task.description == "" || task.date == "") {
+    if (task.title == "" || task.date == "") {
       handleOpenError();
     } else {
       handleClickAddTask();
@@ -115,7 +115,7 @@ export default function List({ data, index: listIndex }) {
             autoFocus
             margin="dense"
             id="title"
-            label="Titulo da tarefa"
+            label="Título"
             type="text"
             name="title"
             onChange={(value) =>
@@ -128,7 +128,6 @@ export default function List({ data, index: listIndex }) {
           />
 
           <TextField
-            required
             margin="dense"
             id="description"
             label="Descrição"

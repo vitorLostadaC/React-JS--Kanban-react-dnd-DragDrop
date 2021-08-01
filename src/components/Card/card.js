@@ -58,7 +58,7 @@ export default function Card(props) {
   };
 
   function validation() {
-    if (task.title == "" || task.description == "" || task.date == "") {
+    if (task.title == "" || task.date == "") {
       handleOpenError();
     } else {
       handleClickModifyTask();
@@ -208,7 +208,7 @@ export default function Card(props) {
             autoFocus
             margin="dense"
             id="taskTitle"
-            label="TitulO"
+            label="Título"
             type="text"
             name="taskTitle"
             defaultValue={props.data.title}
@@ -222,9 +222,8 @@ export default function Card(props) {
           />
 
           <TextField
-            required
             margin="dense"
-            id="taskHiched"
+            id="description"
             label="Descrição"
             type="text"
             name="description"
@@ -271,7 +270,7 @@ export default function Card(props) {
             Cancelar
           </Button>
           <Button onClick={handleDeleteTask} color="primary">
-            Excluir Tarefa
+            Excluir
           </Button>
           <Button onClick={validation} color="primary">
             Salvar

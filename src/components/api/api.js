@@ -42,7 +42,7 @@ export function loadLists() {
           id: 3,
           title: "Ligar para a mãe do Pedro",
           description:
-            "Não esquecer de comentar sobre a festa de semana que vem na casa da isa",
+            "Não esquecer de comentar sobre a festa de semana que vem na casa da isa ",
           color: "#00FF7F",
           users: [
             {
@@ -96,7 +96,7 @@ export function loadLists() {
           id: 10,
           title: "Fazer os deveres",
 
-          description: "Ingles e espanhol",
+          description: "Inglês e espanhol",
           color: "#9400D3",
           users: [
             {

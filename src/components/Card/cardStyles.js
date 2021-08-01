@@ -8,7 +8,7 @@ export const Container = styled.div`
   box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 0.8);
   cursor: pointer;
   border-top: 20px solid ${(props) => props.color};
-  min-height: 100px;
+
   width: 300px;
 
   .card-title {
@@ -57,26 +57,26 @@ export const DateExport = styled.h3`
   border-radius: 5px;
   background-color: #ebebeb;
   color: #333;
+  font-weight: 900;
   ${(props) =>
     props.state == true &&
     css`
       background-color: #f4d463;
       color: #5c4c11;
-      font-weight: 900;
     `}
   ${(props) =>
     props.state == false &&
     css`
       background-color: #f46363;
       color: #4f0c0c;
-      font-weight: 900;
     `};
 `;
 
 export const Description = styled.div`
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   width: max-content;
   padding: 2px 5px;
-  font-size: 0.8em;
+  font-size: 1em;
   border-radius: 4px;
   opacity: 0.8;
   font-weight: 900;
@@ -84,19 +84,19 @@ export const Description = styled.div`
 
 export const ColorPicker = styled.div`
   display: inline-block;
-  position: relative;
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  border: solid 2px #ddd;
-  border-radius: 40px;
 
   input {
-    position: absolute;
-    right: -8px;
-    top: -8px;
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     border: none;
+    border-radius: 40px;
+    background: none;
+  }
+  input::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input::-webkit-color-swatch {
+    border: solid 1px #000; /*change color of the swatch border here*/
+    border-radius: 40px;
   }
 `;

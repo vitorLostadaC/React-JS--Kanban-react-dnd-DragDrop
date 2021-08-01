@@ -42,19 +42,19 @@ export const Container = styled.div`
 
 export const ColorPicker = styled.div`
   display: inline-block;
-  position: relative;
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  border: solid 2px #ddd;
-  border-radius: 40px;
 
   input {
-    position: absolute;
-    right: -8px;
-    top: -8px;
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     border: none;
+    border-radius: 40px;
+    background: none;
+  }
+  input::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input::-webkit-color-swatch {
+    border: solid 1px #000; /*change color of the swatch border here*/
+    border-radius: 40px;
   }
 `;

@@ -42,9 +42,11 @@ export default function List({ data, index: listIndex }) {
       if (data.cards.length == 0) {
         if (monitor.isOver()) {
           if (monitor) {
-            move(item.indexList, listIndex, item.index, 0);
-            item.index = 0;
-            item.indexList = listIndex;
+            var result = move(item.indexList, listIndex, item.index, 0);
+            if (result) {
+              item.index = 0;
+              item.indexList = listIndex;
+            }
           }
         }
       }

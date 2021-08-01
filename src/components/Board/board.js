@@ -26,8 +26,12 @@ export default function Board() {
         }
       });
     });
-
-    !control && setLists(modifieldList);
+    if (!control) {
+      setLists(modifieldList);
+      return true;
+    } else {
+      return false;
+    }
   }
 
   return (

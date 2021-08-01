@@ -177,10 +177,17 @@ export default function Card(props) {
           return;
         }
 
-        move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+        var result = move(
+          draggedListIndex,
+          targetListIndex,
+          draggedIndex,
+          targetIndex
+        );
 
-        item.index = targetIndex;
-        item.indexList = targetListIndex;
+        if (result) {
+          item.index = targetIndex;
+          item.indexList = targetListIndex;
+        }
       }
     },
   });

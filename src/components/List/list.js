@@ -40,31 +40,12 @@ export default function List({ data, index: listIndex }) {
     accept: "CARD",
     hover(item, monitor) {
       if (data.cards.length == 0) {
-        switch (listIndex) {
-          case 0:
-            if (monitor.targetId == "T8") {
-              move(item.indexList, 0, item.index, 0); //mudar a função
-
-              item.index = 0;
-              item.indexList = 0;
-            }
-            break;
-          case 1:
-            if (monitor.targetId == "T15") {
-              move(item.indexList, 1, item.index, 0); //mudar a função
-
-              item.index = 0;
-              item.indexList = 1;
-            }
-            break;
-          case 2:
-            if (monitor.targetId == "T20") {
-              move(item.indexList, 2, item.index, 0); //mudar a função
-
-              item.index = 0;
-              item.indexList = 2;
-            }
-            break;
+        if (monitor.isOver()) {
+          if (monitor) {
+            move(item.indexList, listIndex, item.index, 0);
+            item.index = 0;
+            item.indexList = listIndex;
+          }
         }
       }
     },
@@ -226,16 +207,20 @@ export default function List({ data, index: listIndex }) {
         <ul>
           {data.cards.length}
 
-          {data.cards.map((cards, index) => (
-            <Card
-              default={false}
-              key={cards.id}
-              index={index}
-              data={cards}
-              indexList={listIndex}
-              formateDateFunction={formateDate}
-            />
-          ))}
+          {typeof data !== "undefined" &&
+            data.cards.map(
+              (cards, index) =>
+                typeof cards !== "undefined" && (
+                  <Card
+                    default={false}
+                    key={cards.id}
+                    index={index}
+                    data={cards}
+                    indexList={listIndex}
+                    formateDateFunction={formateDate}
+                  />
+                )
+            )}
         </ul>
       </Container>
     </>

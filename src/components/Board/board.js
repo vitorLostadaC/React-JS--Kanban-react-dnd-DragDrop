@@ -11,13 +11,23 @@ export default function Board() {
   const [lists, setLists] = useState(data);
 
   function move(fromList, toList, from, to) {
-    setLists(
-      produce(lists, (draft) => {
-        const dragged = draft[fromList].cards[from];
-        draft[fromList].cards.splice(from, 1);
-        draft[toList].cards.splice(to, 0, dragged);
-      })
-    );
+    var control = false;
+    var modifieldList = produce(lists, (draft) => {
+      const dragged = draft[fromList].cards[from];
+
+      draft[fromList].cards.splice(from, 1);
+      draft[toList].cards.splice(to, 0, dragged);
+    });
+
+    modifieldList.map((values) => {
+      values.cards.map((val) => {
+        if (typeof val === "undefined") {
+          control = true;
+        }
+      });
+    });
+
+    !control && setLists(modifieldList);
   }
 
   return (

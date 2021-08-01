@@ -38,6 +38,18 @@ export function loadLists() {
           ],
           date: "10/06/2021",
         },
+        {
+          id: 3,
+          title: "Fazer os deveres",
+          description: "Matemática página 13",
+          color: "#0000FF",
+          users: [
+            {
+              img: "https://i.pinimg.com/originals/e3/9c/cc/e39ccc946f7d7b929fef42bb82940468.png",
+            },
+          ],
+          date: "10/06/2021",
+        },
       ],
     },
     {

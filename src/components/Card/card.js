@@ -45,7 +45,7 @@ export default function Card(props) {
   const [openDialogError, setOpenDialogError] = useState(false);
 
   const [task, setTask] = useState({
-    id: uuid(),
+    id: props.data.id,
     title: props.data.title,
     description: props.data.description,
     color: props.data.color,
@@ -255,7 +255,7 @@ export default function Card(props) {
           <ColorPicker>
             <input
               type="color"
-              defaultValue="#ff0000"
+              defaultValue={props.data.color}
               onChange={(value) =>
                 setTask((prevState) => ({
                   ...prevState,

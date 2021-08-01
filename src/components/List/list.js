@@ -27,7 +27,7 @@ export default function List({ data, index: listIndex }) {
     id: uuid(), //mudar posteriormente
     title: "",
     description: "",
-    color: "#342543",
+    color: "#ff0000",
     users: [
       {
         img: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1485665415623x323958275606855740%2FAA_icon.png?w=&h=&auto=compress&dpr=1&fit=max",
@@ -58,7 +58,7 @@ export default function List({ data, index: listIndex }) {
       ...prevState,
       title: "",
       description: "",
-      color: "#342543",
+      color: "#ff0000",
       users: [
         {
           img: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1485665415623x323958275606855740%2FAA_icon.png?w=&h=&auto=compress&dpr=1&fit=max",

@@ -17,6 +17,17 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 42px;
+
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: black;
+      border: 0;
+      cursor: pointer;
+      margin-top: 5px;
+      padding: 2px;
+    }
   }
 
   ul {
@@ -26,17 +37,6 @@ export const Container = styled.div`
 
   h2 {
     padding: 0 10px;
-  }
-
-  button {
-    width: 35px;
-    height: 35px;
-    border-radius: 15px;
-    background-color: #2d0044;
-    border: 0;
-    cursor: pointer;
-    margin-top: 5px;
-    margin-bottom: 10px;
   }
 `;
 
